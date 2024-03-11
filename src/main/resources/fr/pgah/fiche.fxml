@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<SplitPane dividerPositions="0.0969908651262762" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="746.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+         <children>
+            <Label layoutX="215.0" layoutY="-2.0" prefHeight="30.0" prefWidth="168.0" text="ETAT DE FRAIS ENGAGES" textAlignment="CENTER" textFill="#2e1d84">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="15.0" layoutY="28.0" prefHeight="23.0" prefWidth="567.0" text="A retourner accompagné des justificatifs au plus tard le 10 du mois qui suit l’engagement des frais" textFill="#1f138e">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="674.0" prefWidth="598.0">
+         <children>
+            <Label layoutX="54.0" layoutY="17.0" prefHeight="23.0" prefWidth="54.0" text="Visiteur" textFill="#0e1e99">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="145.0" layoutY="20.0" prefHeight="18.0" prefWidth="62.0" text="Matricule :" />
+            <TextField id="matricule" layoutX="208.0" layoutY="17.0" prefHeight="26.0" prefWidth="185.0" />
+            <Label layoutX="145.0" layoutY="52.0" prefHeight="18.0" prefWidth="62.0" text="Nom  :" />
+            <TextField id="nom" layoutX="208.0" layoutY="49.0" prefHeight="26.0" prefWidth="186.0" />
+            <Label layoutX="54.0" layoutY="109.0" prefHeight="18.0" prefWidth="54.0" text="Mois" textFill="#1320ae">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <TextField id="mois" layoutX="133.0" layoutY="106.0" />
+         </children></AnchorPane>
+  </items>
+</SplitPane>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="768.0" minWidth="1024.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.pgah.Controllers.ListeVisiteursController">
+   <children>
+      <Label layoutX="15.0" layoutY="73.0" text="Liste des visiteurs utilisant un composant ListView" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="73.0">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="420.0" layoutY="36.0" text="GSB" textFill="#000000c9" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+         <font>
+            <Font name="Segoe UI Black Italic" size="36.0" />
+         </font>
+      </Label>
+      <ListView fx:id="lvVisiteurs" layoutX="14.0" layoutY="111.0" prefHeight="180.0" prefWidth="994.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="111.0" />
+      <Label layoutX="15.0" layoutY="310.0" text="Liste des visiteurs utilisant un composant TableView" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="310.0">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tvVisiteurs" layoutX="15.0" layoutY="346.0" prefHeight="364.0" prefWidth="995.0" AnchorPane.bottomAnchor="58.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="346.0" />
+      <Button layoutX="364.0" layoutY="546.0" onAction="#btnVersAutreEcran" text="Vers un autre écran" textAlignment="CENTER" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0">
+         <font>
+            <Font name="Segoe UI" size="14.0" />
+         </font>
+      </Button>
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+</AnchorPane>
