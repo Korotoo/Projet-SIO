@@ -9,7 +9,7 @@
 
 <SplitPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="746.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
   <items>
-    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="745.0" prefWidth="575.0" snapToPixel="false">
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="745.0" prefWidth="575.0" snapToPixel="false" SplitPane.resizableWithParent="false">
          <children>
             <Label layoutX="216.0" layoutY="14.0" prefHeight="30.0" prefWidth="168.0" text="ETAT DE FRAIS ENGAGES" textAlignment="CENTER" textFill="#2e1d84">
                <font>
@@ -21,21 +21,12 @@
                   <Font size="13.0" />
                </font>
             </Label>
-            <Label layoutX="40.0" layoutY="85.0" prefHeight="23.0" prefWidth="54.0" text="Visiteur" textFill="#0e1e99">
+            <Label layoutX="171.0" layoutY="132.0" prefHeight="18.0" prefWidth="54.0" text="Mois :" textFill="#1320ae">
                <font>
                   <Font size="13.0" />
                </font>
             </Label>
-            <Label layoutX="136.0" layoutY="97.0" prefHeight="18.0" prefWidth="62.0" text="Matricule :" />
-            <TextField id="matricule" fx:id="matricule" layoutX="207.0" layoutY="84.0" prefHeight="26.0" prefWidth="185.0" />
-            <Label layoutX="153.0" layoutY="128.0" prefHeight="18.0" prefWidth="62.0" text="Nom  :" />
-            <TextField id="nom" fx:id="nom" layoutX="207.0" layoutY="115.0" prefHeight="26.0" prefWidth="186.0" />
-            <Label layoutX="54.0" layoutY="149.0" prefHeight="18.0" prefWidth="54.0" text="Mois" textFill="#1320ae">
-               <font>
-                  <Font size="13.0" />
-               </font>
-            </Label>
-            <TextField id="mois" layoutX="149.0" layoutY="155.0" />
+            <TextField id="mois" layoutX="215.0" layoutY="129.0" />
             <Separator layoutX="84.0" layoutY="81.0" prefWidth="200.0" scaleX="50.0" scaleY="5.0" />
             <Separator layoutX="198.0" layoutY="260.0" prefHeight="6.0" prefWidth="186.0" scaleX="3.0" scaleY="2.0" />
             <Separator layoutX="15.0" layoutY="302.0" orientation="VERTICAL" prefHeight="83.0" prefWidth="6.0" scaleX="2.0" scaleY="2.0" />
@@ -67,7 +58,38 @@
             <TextField editable="false" layoutX="456.0" layoutY="392.0" prefHeight="26.0" prefWidth="108.0" />
             <Label layoutX="277.0" layoutY="460.0" prefHeight="18.0" prefWidth="80.0" text="Autre Frais" />
             <Separator layoutX="165.0" layoutY="490.0" prefHeight="6.0" prefWidth="274.0" scaleX="2.0" scaleY="2.0" />
-            <Separator layoutX="30.0" layoutY="502.0" orientation="VERTICAL" prefHeight="23.0" prefWidth="6.0" scaleX="2.0" scaleY="2.0" snapToPixel="false" />
+            <Separator layoutX="29.0" layoutY="548.0" orientation="VERTICAL" prefHeight="114.0" prefWidth="6.0" scaleX="2.0" scaleY="2.0" snapToPixel="false" />
+            <Separator layoutX="574.0" layoutY="550.0" orientation="VERTICAL" prefHeight="113.0" prefWidth="6.0" scaleX="2.0" scaleY="2.0" snapToPixel="false" />
+            <Separator layoutX="165.0" layoutY="534.0" prefHeight="6.0" prefWidth="273.0" scaleX="2.0" scaleY="2.0" />
+            <Label layoutX="88.0" layoutY="505.0" prefHeight="18.0" prefWidth="36.0" text="Date" />
+            <Label layoutX="275.0" layoutY="505.0" prefHeight="18.0" prefWidth="54.0" text="Libellé" />
+            <Label layoutX="472.0" layoutY="505.0" prefHeight="18.0" prefWidth="54.0" text="Montant" />
+            <Separator layoutX="165.0" layoutY="716.0" prefHeight="6.0" prefWidth="272.0" scaleX="2.0" scaleY="2.0" />
+            <Separator layoutX="164.0" layoutY="573.0" prefHeight="6.0" prefWidth="272.0" scaleX="2.0" scaleY="2.0" />
+            <Separator layoutX="166.0" layoutY="602.0" prefHeight="6.0" prefWidth="272.0" scaleX="2.0" scaleY="2.0" />
+            <Separator layoutX="170.0" layoutY="582.0" orientation="VERTICAL" prefHeight="91.0" prefWidth="6.0" scaleX="2.0" scaleY="2.0" snapToPixel="false" />
+            <Separator layoutX="419.0" layoutY="582.0" orientation="VERTICAL" prefHeight="91.0" prefWidth="6.0" scaleX="2.0" scaleY="2.0" snapToPixel="false" />
+            <Separator layoutX="165.0" layoutY="631.0" prefHeight="6.0" prefWidth="272.0" scaleX="2.0" scaleY="2.0" />
+            <Separator layoutX="164.0" layoutY="661.0" prefHeight="6.0" prefWidth="272.0" scaleX="2.0" scaleY="2.0" />
+            <Separator layoutX="166.0" layoutY="690.0" prefHeight="6.0" prefWidth="272.0" scaleX="2.0" scaleY="2.0" />
+            <TextField layoutX="30.0" layoutY="543.0" prefHeight="26.0" prefWidth="138.0" />
+            <TextField layoutX="172.0" layoutY="543.0" prefHeight="26.0" prefWidth="246.0" />
+            <TextField layoutX="430.0" layoutY="543.0" prefHeight="26.0" prefWidth="138.0" />
+            <TextField layoutX="172.0" layoutY="576.0" prefHeight="26.0" prefWidth="246.0" />
+            <TextField layoutX="30.0" layoutY="576.0" prefHeight="26.0" prefWidth="138.0" />
+            <TextField layoutX="430.0" layoutY="576.0" prefHeight="26.0" prefWidth="138.0" />
+            <TextField layoutX="430.0" layoutY="607.0" prefHeight="26.0" prefWidth="138.0" />
+            <TextField layoutX="173.0" layoutY="607.0" prefHeight="26.0" prefWidth="246.0" />
+            <TextField layoutX="30.0" layoutY="607.0" prefHeight="26.0" prefWidth="138.0" />
+            <TextField layoutX="30.0" layoutY="634.0" prefHeight="26.0" prefWidth="138.0" />
+            <TextField layoutX="172.0" layoutY="634.0" prefHeight="26.0" prefWidth="246.0" />
+            <TextField layoutX="430.0" layoutY="634.0" prefHeight="23.0" prefWidth="138.0" />
+            <TextField layoutX="430.0" layoutY="664.0" prefHeight="23.0" prefWidth="138.0" />
+            <TextField layoutX="172.0" layoutY="664.0" prefHeight="26.0" prefWidth="246.0" />
+            <TextField layoutX="30.0" layoutY="664.0" prefHeight="23.0" prefWidth="138.0" />
+            <TextField layoutX="30.0" layoutY="693.0" prefHeight="23.0" prefWidth="138.0" />
+            <TextField layoutX="171.0" layoutY="693.0" prefHeight="26.0" prefWidth="246.0" />
+            <TextField layoutX="430.0" layoutY="693.0" prefHeight="23.0" prefWidth="138.0" />
          </children>
       </AnchorPane>
   </items>
