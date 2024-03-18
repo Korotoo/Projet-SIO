@@ -103,6 +103,6 @@ public class ListeVisiteursController implements Initializable {
    */
   @FXML
   private void btnVersAutreEcran(ActionEvent event) throws IOException {
-    App.setRoot("autre_ecran");
+    App.setRoot("fiche");
   }
 }
