@@ -9,14 +9,17 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 /**
- * Cette classe (qui étend la classe Application de JavaFX) est le point d'entrée principal dans
+ * Cette classe (qui étend la classe Application de JavaFX) est le point
+ * d'entrée principal dans
  * l'application JavaFX.
  */
 public class App extends Application {
 
   /**
-   * La scène (contenu de la fenêtre) principale de l'application. Cette scène va changer en
-   * fonction de l'écran que l'on veut afficher. On passera par la méthode setRoot() pour changer la
+   * La scène (contenu de la fenêtre) principale de l'application. Cette scène va
+   * changer en
+   * fonction de l'écran que l'on veut afficher. On passera par la méthode
+   * setRoot() pour changer la
    * scène.
    */
   private static Scene scene;
@@ -33,7 +36,7 @@ public class App extends Application {
     stage.setMinWidth(1024);
     stage.setMinHeight(768);
     // L'écran à afficher au démarrage de l'application
-    scene = new Scene(loadFXML("liste_visiteurs"), 1024, 768);
+    scene = new Scene(loadFXML("page_connexion"), 1024, 768);
     stage.setScene(scene);
     stage.show();
   }

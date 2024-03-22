@@ -2,6 +2,7 @@ package fr.pgah.AccesBdd;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -17,7 +18,7 @@ public class AccesBdd {
   private static int port = 3306;
   private static String urlConnexion = "jdbc:mysql://" + serveur + ":" + port + "/" + nom;
   private static String nomUtilisateur = "root";
-  private static String mdpUtilisateur = "Nathan";
+  private static String mdpUtilisateur = "nathan";
 
   /**
    * Retourne une connexion à la base de données.
@@ -54,7 +55,8 @@ public class AccesBdd {
 
     // La liste qui va être renvoyée par la méthode
     ObservableList<Visiteur> visiteurs = FXCollections.observableArrayList();
-    // Code de requête SQL pour récupérer les visiteurs encapsulé dans une structure try/catch
+    // Code de requête SQL pour récupérer les visiteurs encapsulé dans une structure
+    // try/catch
     // (l'accès à la BDD peut échouer)
     try {
       String sql = "SELECT vi_matricule, vi_nom, vi_prenom FROM visiteur";
@@ -80,4 +82,30 @@ public class AccesBdd {
     Logger.log("Récupération visiteurs OK");
     return visiteurs;
   }
+
+  public static boolean verifierIdentifiants(String identifiant, String motDePasse) {
+    Connection conn = getConnection();
+    if (conn == null) {
+      return false;
+    }
+
+    try {
+      String sql = "SELECT COUNT(*) AS count FROM credentials WHERE cr_identifiant = ? AND cr_mot_de_passe = ?";
+      PreparedStatement requete = conn.prepareStatement(sql);
+      requete.setString(1, identifiant);
+      requete.setString(2, motDePasse);
+      ResultSet res = requete.executeQuery();
+
+      if (res.next()) {
+        int count = res.getInt("count");
+
+        return count > 0;
+      }
+    } catch (SQLException ex) {
+      Logger.log("Erreur lors de la vérification des identifiants.");
+      Logger.log(ex.getMessage());
+    }
+    return false;
+  }
+
 }
