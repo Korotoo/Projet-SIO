@@ -18,7 +18,7 @@ public class AccesBdd {
   private static int port = 3306;
   private static String urlConnexion = "jdbc:mysql://" + serveur + ":" + port + "/" + nom;
   private static String nomUtilisateur = "root";
-  private static String mdpUtilisateur = "nathan";
+  private static String mdpUtilisateur = "azerty";
 
   /**
    * Retourne une connexion à la base de données.
