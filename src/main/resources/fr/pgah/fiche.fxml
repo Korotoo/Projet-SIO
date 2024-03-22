@@ -26,7 +26,7 @@
                   <Font size="13.0" />
                </font>
             </Label>
-            <TextField id="mois" layoutX="215.0" layoutY="129.0" />
+            <TextField id="mois" fx:id="mois" layoutX="215.0" layoutY="129.0" />
             <Separator layoutX="84.0" layoutY="81.0" prefWidth="200.0" scaleX="50.0" scaleY="5.0" />
             <Separator layoutX="198.0" layoutY="260.0" prefHeight="6.0" prefWidth="186.0" scaleX="3.0" scaleY="2.0" />
             <Separator layoutX="15.0" layoutY="302.0" orientation="VERTICAL" prefHeight="83.0" prefWidth="6.0" scaleX="2.0" scaleY="2.0" />
@@ -47,9 +47,9 @@
             <Label layoutX="317.0" layoutY="239.0" prefHeight="18.0" prefWidth="108.0" text="Montant unitaire" />
             <Label layoutX="499.0" layoutY="239.0" prefHeight="18.0" prefWidth="62.0" text="Total" />
             <Separator layoutX="447.0" layoutY="303.0" orientation="VERTICAL" prefHeight="84.0" prefWidth="6.0" scaleX="2.0" scaleY="2.0" />
-            <TextField layoutX="149.0" layoutY="272.0" prefHeight="26.0" prefWidth="126.0" />
-            <TextField layoutX="149.0" layoutY="332.0" prefHeight="26.0" prefWidth="126.0" />
-            <TextField layoutX="149.0" layoutY="392.0" prefHeight="26.0" prefWidth="126.0" />
+            <TextField fx:id="nuitees" layoutX="149.0" layoutY="272.0" prefHeight="26.0" prefWidth="126.0" />
+            <TextField fx:id="repas" layoutX="149.0" layoutY="332.0" prefHeight="26.0" prefWidth="126.0" />
+            <TextField fx:id="km" layoutX="149.0" layoutY="392.0" prefHeight="26.0" prefWidth="126.0" />
             <TextField editable="false" layoutX="296.0" layoutY="272.0" prefHeight="26.0" prefWidth="126.0" />
             <TextField editable="false" layoutX="296.0" layoutY="330.0" prefHeight="26.0" prefWidth="126.0" />
             <TextField editable="false" layoutX="296.0" layoutY="392.0" prefHeight="26.0" prefWidth="126.0" />
