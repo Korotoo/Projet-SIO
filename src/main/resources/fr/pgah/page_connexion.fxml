@@ -32,6 +32,6 @@
          </font>
       </Label>
       <Button id="btn_connexion" fx:id="btn_connexion" layoutX="252.0" layoutY="207.0" mnemonicParsing="false" onAction="#btnConnexion" prefHeight="39.0" prefWidth="94.0" text="Connexion" />
-      <Text fx:id="messageErreur" layoutX="268.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text fx:id="messageErreur" layoutX="192.0" layoutY="282.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="216.8000244140626" />
    </children>
 </AnchorPane>

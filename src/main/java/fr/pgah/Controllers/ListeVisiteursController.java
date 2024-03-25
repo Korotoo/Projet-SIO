@@ -17,7 +17,8 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 /**
- * Classe ListeVisiteursController qui gère l'affichage des visiteurs. Cette classe est responsable
+ * Classe ListeVisiteursController qui gère l'affichage des visiteurs. Cette
+ * classe est responsable
  * de la gestion de la liste des visiteurs dans l'interface utilisateur.
  */
 public class ListeVisiteursController implements Initializable {
@@ -31,13 +32,16 @@ public class ListeVisiteursController implements Initializable {
   private TableView<Visiteur> tvVisiteurs;
 
   /**
-   * Méthode appelée au démarrage de l'application JavaFX. Elle initialise la ListView et la
-   * TableView des visiteurs (deux fois la même fonctionnalité, mais avec des composants graphiques
-   * différents). Ici les paramètres ne sont pas utilisés, mais on est obligé des les indiquer car
+   * Méthode appelée au démarrage de l'application JavaFX. Elle initialise la
+   * ListView et la
+   * TableView des visiteurs (deux fois la même fonctionnalité, mais avec des
+   * composants graphiques
+   * différents). Ici les paramètres ne sont pas utilisés, mais on est obligé des
+   * les indiquer car
    * JavaFX nous y oblige (la méthode est spécifiée ainsi dans le framework).
    *
    * @param url l'URL de la racine de l'objet de contenu
-   * @param rb les ressources utilisées pour localiser l'objet de contenu
+   * @param rb  les ressources utilisées pour localiser l'objet de contenu
    */
   @Override
   public void initialize(URL url, ResourceBundle rb) {
@@ -45,29 +49,35 @@ public class ListeVisiteursController implements Initializable {
     visiteurs = AccesBdd.getVisiteurs();
 
     // Initialisation des composants graphiques et peuplement avec les visiteurs
-    peuplerListView();
+    // peuplerListView();
     initialiserTableView();
     peuplerTableView();
   }
 
   /**
-   * Peuple la ListView avec les visiteurs. La ListView est plus simple à utiliser, mais on ne peut
+   * Peuple la ListView avec les visiteurs. La ListView est plus simple à
+   * utiliser, mais on ne peut
    * pas décomposer en colonnes.
    */
-  private void peuplerListView() {
-    // On construit la liste de strings à partir de la liste de visiteurs
-    // L'expression est complexe, retenez simplement qu'on appelle toString()
-    // sur chaque visiteur
-    ObservableList<String> visiteursString =
-        FXCollections.observableArrayList(visiteurs.stream().map(v -> v.toString()).toList());
-
-    // On ajoute la liste de strings à la ListView
-    lvVisiteurs.setItems(visiteursString);
-  }
+  /**
+   * private void peuplerListView() {
+   * // On construit la liste de strings à partir de la liste de visiteurs
+   * // L'expression est complexe, retenez simplement qu'on appelle toString()
+   * // sur chaque visiteur
+   * ObservableList<String> visiteursString =
+   * FXCollections.observableArrayList(visiteurs.stream().map(v ->
+   * v.toString()).toList());
+   * 
+   * // On ajoute la liste de strings à la ListView
+   * lvVisiteurs.setItems(visiteursString);
+   * }
+   */
 
   /**
-   * Initialise trois colonnes pour la TableView. La TableView est plus complexe à utiliser, mais
-   * est plus puissante que la ListView. On peut décomposer en colonnes, ajouter des boutons pour
+   * Initialise trois colonnes pour la TableView. La TableView est plus complexe à
+   * utiliser, mais
+   * est plus puissante que la ListView. On peut décomposer en colonnes, ajouter
+   * des boutons pour
    * chaque élément, etc.
    */
   private void initialiserTableView() {
@@ -95,7 +105,8 @@ public class ListeVisiteursController implements Initializable {
   }
 
   /**
-   * Appelée lorsqu'on clique sur le bouton "Vers autre écran". Elle change le contenu de la fenêtre
+   * Appelée lorsqu'on clique sur le bouton "Vers autre écran". Elle change le
+   * contenu de la fenêtre
    * pour afficher un autre écran.
    *
    * @param event l'événement qui a déclenché l'appel de cette méthode
@@ -103,6 +114,6 @@ public class ListeVisiteursController implements Initializable {
    */
   @FXML
   private void btnVersAutreEcran(ActionEvent event) throws IOException {
-    App.setRoot("fiche");
+    App.setRoot("page_accueil");
   }
 }
