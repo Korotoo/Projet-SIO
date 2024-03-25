@@ -3,11 +3,34 @@ package fr.pgah.Controllers;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.Date;
 
 import fr.pgah.AccesBdd.AccesBdd;
 import fr.pgah.Model.FicheDeFrais;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.control.TextField;
 
 public class FicheDeFraisController {
+  @FXML
+  private TextField nuitees;
+  @FXML
+  private TextField repas;
+  @FXML
+  private TextField km;
+
+  @FXML
+  void BtnChargementClick(ActionEvent event) {
+    FicheDeFrais fiche = getFicheDeFrais();
+    String nombreDeNuitees = fiche.getNuitees();
+    String nombreDeRepas = fiche.getRepas();
+    String nombreDeKm = fiche.getkm();
+
+    nuitees.setText(nombreDeNuitees);
+    repas.setText(nombreDeRepas);
+    km.setText(nombreDeKm);
+
+  }
 
   public static FicheDeFrais getFicheDeFrais() {
     Connection conn = AccesBdd.getConnection();
@@ -24,14 +47,19 @@ public class FicheDeFraisController {
       ResultSet res = requete.executeQuery(sql);
       // On parcourt le ResultSet avec un while pour traiter chaque visiteur récupéré
       while (res.next()) {
-        // On récupère chaque propriété du visiteur dans des variables
+        // On récupère chaque nuittées pour le visiteur
 
-        String nuitees = res.getString("ff_qte_nuitees");
-        // String mois = res.getString("ff_mois");
-        // String repas = res.getString("ff_qte_repas");
-        // String km = res.getString("ff_qte_km");
+        String nuiteesStr = res.getString("ff_qte_nuitees");
+        int nuitees = Integer.parseInt(nuiteesStr);
+        // Date moisStr = res.getDate("ff_mois");
+
+        String repasStr = res.getString("ff_qte_repas");
+        int repas = Integer.parseInt(repasStr);
+
+        String kmStr = res.getString("ff_qte_km");
+        int km = Integer.parseInt(kmStr);
         // On instancie un objet Visiteur avec ces propriétés
-        fiche = new FicheDeFrais(nuitees);
+        fiche = new FicheDeFrais(nuitees, repas, km);
 
       }
     } catch (Exception e) {
