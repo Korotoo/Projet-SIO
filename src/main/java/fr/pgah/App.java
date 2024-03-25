@@ -36,7 +36,7 @@ public class App extends Application {
     stage.setMinWidth(1024);
     stage.setMinHeight(768);
     // L'écran à afficher au démarrage de l'application
-    scene = new Scene(loadFXML("fiche"), 1024, 768);
+    scene = new Scene(loadFXML("page_connexion"), 1024, 768);
     stage.setScene(scene);
     stage.show();
   }

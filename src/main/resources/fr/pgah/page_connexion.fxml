@@ -33,6 +33,5 @@
       </Label>
       <Button id="btn_connexion" fx:id="btn_connexion" layoutX="252.0" layoutY="207.0" mnemonicParsing="false" onAction="#btnConnexion" prefHeight="39.0" prefWidth="94.0" text="Connexion" />
       <Text fx:id="messageErreur" layoutX="268.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-      <Button layoutX="79.0" layoutY="55.0" mnemonicParsing="false" text="Button" />
    </children>
 </AnchorPane>
