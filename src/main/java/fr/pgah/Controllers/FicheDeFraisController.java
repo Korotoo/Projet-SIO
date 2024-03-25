@@ -19,9 +19,11 @@ public class FicheDeFraisController {
   @FXML
   private TextField km;
 
+  private FicheDeFrais fiche;
+
   @FXML
   void BtnChargementClick(ActionEvent event) {
-    FicheDeFrais fiche = getFicheDeFrais();
+    fiche = getFicheDeFrais();
     String nombreDeNuitees = fiche.getNuitees();
     String nombreDeRepas = fiche.getRepas();
     String nombreDeKm = fiche.getkm();
@@ -29,6 +31,25 @@ public class FicheDeFraisController {
     nuitees.setText(nombreDeNuitees);
     repas.setText(nombreDeRepas);
     km.setText(nombreDeKm);
+  }
+
+  @FXML
+  void BtnValidationClick(ActionEvent event) {
+
+    String nombreDeNuitees = this.nuitees.getText();
+    int nuitees = Integer.parseInt(nombreDeNuitees);
+
+    String nombreDeRepas = this.repas.getText();
+    int repas = Integer.parseInt(nombreDeRepas);
+
+    String nombreDeKm = this.km.getText();
+    int km = Integer.parseInt(nombreDeKm);
+
+    fiche.setNuitees(nuitees);
+    fiche.setKm(km);
+    fiche.setRepas(repas);
+
+    enregistrerFicheDeFrais(fiche);
 
   }
 
