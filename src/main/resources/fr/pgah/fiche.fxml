@@ -9,9 +9,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<SplitPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="816.0" prefWidth="594.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<SplitPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
   <items>
-    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="751.0" prefWidth="598.0" snapToPixel="false" SplitPane.resizableWithParent="false">
+    <AnchorPane snapToPixel="false" SplitPane.resizableWithParent="false">
          <children>
             <Label layoutX="216.0" layoutY="14.0" prefHeight="30.0" prefWidth="168.0" text="ETAT DE FRAIS ENGAGES" textAlignment="CENTER" textFill="#2e1d84">
                <font>
