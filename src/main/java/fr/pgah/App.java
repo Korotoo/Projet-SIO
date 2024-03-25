@@ -33,8 +33,8 @@ public class App extends Application {
   @Override
   public void start(Stage stage) throws IOException {
     // On définit la taille minimale de la fenêtre
-    stage.setMinWidth(1024);
-    stage.setMinHeight(768);
+    stage.setMinWidth(300);;
+    stage.setMinHeight(868);
     // L'écran à afficher au démarrage de l'application
     scene = new Scene(loadFXML("page_connexion"));
     stage.setScene(scene);
