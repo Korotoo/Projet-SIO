@@ -1,5 +1,8 @@
 package fr.pgah.Controllers;
 
+import java.io.IOException;
+
+import fr.pgah.App;
 import fr.pgah.AccesBdd.AccesBdd;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -22,7 +25,7 @@ public class PageConnexionController {
     private Text messageErreur;
 
     @FXML
-    void btnConnexion(ActionEvent event) {
+    void btnConnexion(ActionEvent event) throws IOException {
 
         String identifiant = id_login.getText();
         String motDePasse = id_password.getText();
@@ -33,7 +36,9 @@ public class PageConnexionController {
 
         if (identifiantsValides) {
             // Rediriger l'utilisateur vers la page suivante
+            App.setRoot("page_accueil");
             messageErreur.setText("Connexion réussie !");
+
             // Code pour changer de scène ou effectuer d'autres actions après la connexion
             // réussie
         } else {
