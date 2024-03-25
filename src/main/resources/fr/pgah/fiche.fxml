@@ -93,6 +93,7 @@
             <Button layoutX="40.0" layoutY="117.0" mnemonicParsing="false" onAction="#BtnChargementClick" text="Chargement" />
             <Separator layoutX="217.0" layoutY="83.0" prefHeight="3.0" prefWidth="158.0" scaleX="4.0" scaleY="4.0" />
             <Button layoutX="504.0" layoutY="738.0" mnemonicParsing="false" text="Valider" />
+            <Button fx:id="returnn" layoutX="47.0" layoutY="738.0" mnemonicParsing="false" onAction="#id_return" text="Retour" />
          </children>
       </AnchorPane>
   </items>

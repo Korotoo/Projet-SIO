@@ -1,10 +1,12 @@
 package fr.pgah.Controllers;
 
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.Date;
 
+import fr.pgah.App;
 import fr.pgah.AccesBdd.AccesBdd;
 import fr.pgah.Model.FicheDeFrais;
 import javafx.event.ActionEvent;
@@ -29,6 +31,13 @@ public class FicheDeFraisController {
     nuitees.setText(nombreDeNuitees);
     repas.setText(nombreDeRepas);
     km.setText(nombreDeKm);
+
+  }
+
+  
+  @FXML
+  void id_return(ActionEvent event) throws IOException {
+        App.setRoot("page_accueil");
 
   }
 
