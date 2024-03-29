@@ -5,6 +5,18 @@ public class FicheDeFrais {
     private int repas;
     private int km;
 
+    public void setNuitees(int nuitees) {
+        this.nuitees = nuitees;
+    }
+
+    public void setRepas(int repas) {
+        this.repas = repas;
+    }
+
+    public void setKm(int km) {
+        this.km = km;
+    }
+
     public FicheDeFrais(int nuitees, int repas, int km) {
         this.nuitees = nuitees;
         this.repas = repas;
