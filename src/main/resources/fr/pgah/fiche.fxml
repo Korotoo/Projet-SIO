@@ -91,7 +91,8 @@
             <TextField layoutX="171.0" layoutY="693.0" prefHeight="26.0" prefWidth="246.0" />
             <TextField layoutX="430.0" layoutY="693.0" prefHeight="23.0" prefWidth="138.0" />
             <Separator layoutX="217.0" layoutY="83.0" prefHeight="3.0" prefWidth="158.0" scaleX="4.0" scaleY="4.0" />
-            <Button layoutX="504.0" layoutY="738.0" mnemonicParsing="false" onAction="#BtnValidationClick" text="Valider" />
+            <Button layoutX="504.0" layoutY="738.0" mnemonicParsing="false" text="Valider" />
+            <Button fx:id="returnn" layoutX="39.0" layoutY="738.0" mnemonicParsing="false" onAction="#id_return" text="Retour" />
          </children>
       </AnchorPane>
   </items>
