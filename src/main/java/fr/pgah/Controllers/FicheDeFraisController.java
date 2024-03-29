@@ -25,15 +25,10 @@ public class FicheDeFraisController {
   private FicheDeFrais fiche;
 
   @FXML
-  void BtnChargementClick(ActionEvent event) {
-    fiche = getFicheDeFrais();
-    String nombreDeNuitees = fiche.getNuitees();
-    String nombreDeRepas = fiche.getRepas();
-    String nombreDeKm = fiche.getkm();
+  public void initialize() {
+    System.out.println("Lancée");
+    initialisation();
 
-    nuitees.setText(nombreDeNuitees);
-    repas.setText(nombreDeRepas);
-    km.setText(nombreDeKm);
   }
 
   @FXML
@@ -133,6 +128,20 @@ public class FicheDeFraisController {
     }
     return fiche;
 
+  }
+
+  // Je vais afficher les données les données au lancement de la page
+
+  public void initialisation() {
+
+    fiche = getFicheDeFrais();
+    String nombreDeNuitees = fiche.getNuitees();
+    String nombreDeRepas = fiche.getRepas();
+    String nombreDeKm = fiche.getkm();
+
+    nuitees.setText(nombreDeNuitees);
+    repas.setText(nombreDeRepas);
+    km.setText(nombreDeKm);
   }
 
 }
