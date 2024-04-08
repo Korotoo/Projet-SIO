@@ -72,15 +72,15 @@
             <Separator layoutX="165.0" layoutY="631.0" prefHeight="6.0" prefWidth="272.0" scaleX="2.0" scaleY="2.0" />
             <Separator layoutX="164.0" layoutY="661.0" prefHeight="6.0" prefWidth="272.0" scaleX="2.0" scaleY="2.0" />
             <Separator layoutX="166.0" layoutY="690.0" prefHeight="6.0" prefWidth="272.0" scaleX="2.0" scaleY="2.0" />
-            <TextField layoutX="30.0" layoutY="543.0" prefHeight="26.0" prefWidth="138.0" />
-            <TextField layoutX="172.0" layoutY="543.0" prefHeight="26.0" prefWidth="246.0" />
-            <TextField layoutX="430.0" layoutY="543.0" prefHeight="26.0" prefWidth="138.0" />
-            <TextField layoutX="172.0" layoutY="576.0" prefHeight="26.0" prefWidth="246.0" />
-            <TextField layoutX="30.0" layoutY="576.0" prefHeight="26.0" prefWidth="138.0" />
-            <TextField layoutX="430.0" layoutY="576.0" prefHeight="26.0" prefWidth="138.0" />
-            <TextField layoutX="430.0" layoutY="607.0" prefHeight="26.0" prefWidth="138.0" />
-            <TextField layoutX="173.0" layoutY="607.0" prefHeight="26.0" prefWidth="246.0" />
-            <TextField layoutX="30.0" layoutY="607.0" prefHeight="26.0" prefWidth="138.0" />
+            <TextField fx:id="date1" layoutX="30.0" layoutY="543.0" prefHeight="26.0" prefWidth="138.0" />
+            <TextField fx:id="libellé1" layoutX="172.0" layoutY="543.0" prefHeight="26.0" prefWidth="246.0" />
+            <TextField fx:id="montant1" layoutX="430.0" layoutY="543.0" prefHeight="26.0" prefWidth="138.0" />
+            <TextField fx:id="libellé2" layoutX="172.0" layoutY="576.0" prefHeight="26.0" prefWidth="246.0" />
+            <TextField fx:id="date2" layoutX="30.0" layoutY="576.0" prefHeight="26.0" prefWidth="138.0" />
+            <TextField fx:id="montant2" layoutX="430.0" layoutY="576.0" prefHeight="26.0" prefWidth="138.0" />
+            <TextField fx:id="montant3" layoutX="430.0" layoutY="607.0" prefHeight="26.0" prefWidth="138.0" />
+            <TextField fx:id="libellé3" layoutX="173.0" layoutY="607.0" prefHeight="26.0" prefWidth="246.0" />
+            <TextField fx:id="date3" layoutX="30.0" layoutY="607.0" prefHeight="26.0" prefWidth="138.0" />
             <TextField layoutX="30.0" layoutY="634.0" prefHeight="26.0" prefWidth="138.0" />
             <TextField layoutX="172.0" layoutY="634.0" prefHeight="26.0" prefWidth="246.0" />
             <TextField layoutX="430.0" layoutY="634.0" prefHeight="23.0" prefWidth="138.0" />

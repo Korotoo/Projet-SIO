@@ -24,6 +24,36 @@ public class FicheDeFraisController {
 
   private FicheDeFrais fiche;
 
+  /*
+   * @FXML
+   * private TextField date1;
+   * 
+   * @FXML
+   * private TextField date2;
+   * 
+   * @FXML
+   * private TextField date3;
+   * :
+   */
+
+  @FXML
+  private TextField libellé1;
+
+  @FXML
+  private TextField libellé2;
+
+  @FXML
+  private TextField libellé3;
+
+  @FXML
+  private TextField montant1;
+
+  @FXML
+  private TextField montant2;
+
+  @FXML
+  private TextField montant3;
+
   @FXML
   public void initialize() {
     System.out.println("Lancée");
@@ -43,9 +73,16 @@ public class FicheDeFraisController {
     String nombreDeKm = this.km.getText();
     int km = Integer.parseInt(nombreDeKm);
 
+    String nouveauMontant1 = this.montant1.getText();
+    int montant1 = Integer.parseInt(nouveauMontant1);
+
+    String nouveauLibellé1 = this.libellé1.getText();
+
     fiche.setNuitees(nuitees);
     fiche.setKm(km);
     fiche.setRepas(repas);
+    fiche.setMontant1(montant1);
+    fiche.setLibellé1(nouveauLibellé1);
 
     enregistrerFicheDeFrais(nuitees, repas, km);
 
@@ -103,24 +140,30 @@ public class FicheDeFraisController {
     FicheDeFrais fiche = null;
 
     try {
-      String sql = "SELECT * FROM fiche_frais WHERE ff_id = 1";
+      String sql = "SELECT * FROM fiche_frais  JOIN  hors_forfait ON fiche_frais.ff_id = hors_forfait.ff_id WHERE fiche_frais.ff_id = 1;";
       Statement requete = conn.createStatement();
       ResultSet res = requete.executeQuery(sql);
       // On parcourt le ResultSet avec un while pour traiter chaque visiteur récupéré
       while (res.next()) {
         // On récupère chaque nuittées pour le visiteur
 
-        String nuiteesStr = res.getString("ff_qte_nuitees");
-        int nuitees = Integer.parseInt(nuiteesStr);
+        int nuitees = res.getInt("ff_qte_nuitees");
+
         // Date moisStr = res.getDate("ff_mois");
 
-        String repasStr = res.getString("ff_qte_repas");
-        int repas = Integer.parseInt(repasStr);
+        int repas = res.getInt("ff_qte_repas");
+        // int repas = Integer.parseInt(repasStr);
 
-        String kmStr = res.getString("ff_qte_km");
-        int km = Integer.parseInt(kmStr);
+        int km = res.getInt("ff_qte_km");
+        // int km = Integer.parseInt(kmStr);
+
+        double montant1 = res.getDouble("hf_montant");
+        // int montant1 = Integer.parseInt(montant1Str);
+
+        String libellé1 = res.getString("hf_libelle");
+
         // On instancie un objet Visiteur avec ces propriétés
-        fiche = new FicheDeFrais(nuitees, repas, km);
+        fiche = new FicheDeFrais(nuitees, repas, km, montant1, libellé1);
 
       }
     } catch (Exception e) {
@@ -135,13 +178,21 @@ public class FicheDeFraisController {
   public void initialisation() {
 
     fiche = getFicheDeFrais();
-    String nombreDeNuitees = fiche.getNuitees();
-    String nombreDeRepas = fiche.getRepas();
-    String nombreDeKm = fiche.getkm();
+    Integer nombreDeNuitees = fiche.getNuitees();
+    Integer nombreDeRepas = fiche.getRepas();
+    Integer nombreDeKm = fiche.getkm();
+    Double montant1Loc = fiche.getMontant1();
+    String libellé1Loc = fiche.getLibellé1();
 
-    nuitees.setText(nombreDeNuitees);
-    repas.setText(nombreDeRepas);
-    km.setText(nombreDeKm);
+    nuitees.setText(nombreDeNuitees.toString());
+    repas.setText(nombreDeRepas.toString());
+    km.setText(nombreDeKm.toString());
+    montant1.setText(montant1Loc.toString());
+    libellé1.setText(libellé1Loc);
   }
+
+  // INSERT INTO `gsb_etudiants`.`hors_forfait` (`hf_date`, `hf_libelle`,
+  // `hf_montant`, `ff_id`, `ehf_id`) VALUES ('2020-12-25', 'Location de voiture',
+  // '367.98', '1', '1');
 
 }
